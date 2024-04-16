@@ -2,8 +2,6 @@ package p2p
 
 // Peer is a generic interface for a representation of a remote node, which is anything that can send and receive data
 type Peer interface {
-	Send(data []byte) error
-	Receive() ([]byte, error)
 
 }
 
@@ -11,5 +9,5 @@ type Peer interface {
 // This can be iof the form of TCP, UDP, websockets, etc.
 type Transport interface {
 	ListenAndAccept() error
-	
+
 }
